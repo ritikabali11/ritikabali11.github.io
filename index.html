@@ -10,7 +10,44 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	</head>
+	<head>
+		<title>PDF Previewer</title>
+		<style>
+			.pdf-preview-container {
+				display: flex; /* Use flexbox to lay out children side by side */
+				justify-content: space-between; /* Align children with space between them */
+				align-items: start; /* Align children at their start line */
+				padding: 20px; /* Add some padding around the container */
+			}
+
+			#pdfPreviewer {
+				width: 1000px; 
+				height: 600px; 
+				flex-grow: 1; /* Allow the iframe to grow and fill the container */
+				margin-right: 20px; /* Add some margin to the right of the iframe */
+				align-items: center;
+				justify-content: center;				
+			}
+
+			#downloadBtn {
+				/* Adjust styling as needed, for example, padding, background, etc. */
+				padding: 5px 10px;
+				font-size: 12px;
+				background-color: #f56a6a;
+				color: white;
+				text-decoration: none;
+				border-radius: 10px;
+				/* Prevent the button from growing too wide */
+				/*white-space: nowrap; /* Ensure text doesn't wrap */
+				flex: 0 0 auto; /* Do not grow, do not shrink, and base size on content */
+				align-self: center; /* Align button vertically in the center */
+				margin-left: auto; /* Push the button to the right */
+			}		
+
+		</style>
+	</head>	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -24,99 +61,75 @@
 							<header id="header">
 								<a href="index.html" class="logo"><strong>RITIKA BALI</strong></a>
 								<ul class="icons">
+                                    <li><a href="documents/Resume_Ritika_Bali.pdf" class="icon solid fa-file-download"><span class="label">Download Resume</span></a></li>
 									<li><a href="https://twitter.com/ritibali" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="https://www.facebook.com/ritikabali11" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-
 									<li><a href="https://www.instagram.com/ritibali/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-
 								</ul>
 							</header>
-							<section>	<header>
-								<h2>Hi, I'm Ritika!<br>
-								</h2>
-								<p class="title">Welcome to my website<br>
-							</p></header><span class="image main">
-								<img src="images/aboutme1.jpg" alt="" >
-							</span></section>
-							<!-- Banner -->
-							<section id="banner">
-							
-								<div class="content">
-									
-									
-									I am a passionate content creator and editor driven by a deep love for words and storytelling. Currently, I study Creative Writing (MFA) at Miami University.<br>My journey began with a Bachelor's degree in English Literature, where I delved into literary worlds and honed my writing skills. Eager to explore the intersection of creativity and business, I pursued a Master's in Business Administration, adding a strategic layer to my creative foundation.</p>
-<p>Beyond the world of words, I am an avid traveler, finding inspiration in the diverse cultures and landscapes I encounter. Whether I'm exploring bustling city streets or serene natural wonders, my travels infuse my writing with a unique worldly perspective.
-									In addition to my creative pursuits, I am a practitioner of spiritualism, finding profound meaning in the connection between the self and the universe.
-
-									<br>To learn more about my academic and professional background, please feel free to download my resume. I look forward to sharing my expertise and creativity with you.</p>
-
-									<ul class="actions">
-										<li><a href="https://github.com/ritikabali11/ritikabali11.github.io/blob/041859985218d9fdd5581ef26c5c7be61273c1d2/RitikaBaliresume.pdf">Download Resume</a></li>
-									</ul>
-
-								</div>
-								
+							<!-- Content -->
+							<section>
+								<header class="major">
+									<h4>Portfolio</h4>
+								</header>
+								<div>
+									<!-- PDF Previewer -->
+									<iframe id="pdfPreviewer" src="documents/Portfolio_Ritika_Bali.pdf"></iframe>
+									<!-- Download Portfolio Button -->
+									<a id="downloadBtn" href="documents/Portfolio_Ritika_Bali.pdf" download="Portfolio_Ritika_Bali.pdf">Download Portfolio</a>
+								</div>							
 							</section>
-						
-							
-					
-							
-							<!-- Section -->
-								
-
 						</div>
 					</div>
 
 				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+				<div id="sidebar">
+					<div class="inner">
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h4>Menu</h4>
+								</header>
+								<ul>
+									<li><a href="index.html">Homepage</a></li>
+									<li><a href="about.html">About Me</a></li>
+									<li><a href="writings.html">Writings</a></li>
+									<li><a href="publications.html">Publications</a></li>
+									<li><a href="travel.html">TRAVEL</a></li>	
+								</ul>
+							</nav>			
 
-						
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-									
-			
-										<li>
-											<a href="writings.html">Writings</a>
-											
-										</li>
-											<li>
-												<a href="publications.html">Publications</a>
-											
-										</li>
-										<li><a href="travel.html">TRAVEL</a></li>
-									
-										
-									</ul>
-								</nav>
-
+						<!-- Section -->
+						<section>
+							<header class="major">
+								<h4>Get in touch</h4>
+							</header>
 							
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="mailto: balir@miamioh.edu">balir@miamioh.edu</a></li>
-										<li class="icon solid fa-phone">(513) 593-8306</li>
-										
-									</ul>
-								</section>
+							<ul class="contact">
+								<li class="icon solid fa-envelope"><a href="mailto: balir@miamioh.edu">balir@miamioh.edu</a></li>
+								<li class="icon solid fa-phone">(513) 593-8306</li>
+							</ul>
+						</section>           
 
-							<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; Ritika Bali. All rights reserved.</a></p>
-							</footer>
+						<!-- Section -->
+						<section>
+							<header class="major">
+								<h4>Downloads</h4>
+							</header>
+							
+							<ul class="contact">
+								<li class="icon solid fa-file-download"><a href="documents/Portfolio_Ritika_Bali.pdf">Download Portfolio</a></li>
+								<li class="icon solid fa-file-download"><a href="documents/Resume_Ritika_Bali.pdf">Download Resume</a></li>
+							</ul>
+						</section>                            
 
-						</div>
+						<!-- Footer -->
+						<footer id="footer">
+							<p class="copyright">&copy; Ritika Bali. All rights reserved.</a></p>
+						</footer>
+
 					</div>
+				</div>
 
 			</div>
 
