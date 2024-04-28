@@ -20,15 +20,16 @@
 				justify-content: space-between; /* Align children with space between them */
 				align-items: start; /* Align children at their start line */
 				padding: 20px; /* Add some padding around the container */
+				flex-wrap: wrap; /* Allow items to wrap in smaller screens */
 			}
 
 			#pdfPreviewer {
-				width: 1000px; 
-				height: 600px; 
+				width: 100%; /* Make the width responsive to accommodate different display sizes and resolutions */
+				height: 60vh; /* Use viewport height to maintain aspect ratio */
 				flex-grow: 1; /* Allow the iframe to grow and fill the container */
-				margin-right: 20px; /* Add some margin to the right of the iframe */
-				align-items: center;
-				justify-content: center;				
+				/* margin-right: 20px; Add some margin to the right of the iframe */
+				/* align-items: center;
+				justify-content: center;				 */
 			}
 
 			#downloadBtn {
@@ -44,8 +45,18 @@
 				flex: 0 0 auto; /* Do not grow, do not shrink, and base size on content */
 				align-self: center; /* Align button vertically in the center */
 				margin-left: auto; /* Push the button to the right */
-			}		
+			}
 
+			@media (max-width: 768px) {
+				#pdfPreviewer {
+					width: 100%; /* Full width on small screens */
+					height: 50vh; /* Adjust height accordingly */
+					margin-right: 0; /* Remove margin */
+				}
+				.pdf-preview-container {
+					padding: 10px; /* Reduce padding on smaller screens */
+				}
+			}
 		</style>
 	</head>	
 	<body class="is-preload">
@@ -61,10 +72,10 @@
 							<header id="header">
 								<a href="index.html" class="logo"><strong>RITIKA BALI</strong></a>
 								<ul class="icons">
-                                    <li><a href="documents/Resume_Ritika_Bali.pdf" class="icon solid fa-file-download"><span class="label">Download Resume</span></a></li>
-									<li><a href="https://twitter.com/ritibali" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/ritikabali11" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/ritibali/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="documents/Resume_Ritika_Bali.pdf" target="_blank" class="icon solid fa-file-download"><span class="label">Download Resume</span></a></li>
+									<li><a href="https://twitter.com/ritibali" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/ritikabali11" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/ritibali/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
 							</header>
 							<!-- Content -->
@@ -75,8 +86,10 @@
 								<div>
 									<!-- PDF Previewer -->
 									<iframe id="pdfPreviewer" src="documents/Portfolio_Ritika_Bali.pdf"></iframe>
+								</div>
+								<div>
 									<!-- Download Portfolio Button -->
-									<a id="downloadBtn" href="documents/Portfolio_Ritika_Bali.pdf" download="Portfolio_Ritika_Bali.pdf">Download Portfolio</a>
+									<a id="downloadBtn" href="documents/Portfolio_Ritika_Bali.pdf" target="_blank" download="Portfolio_Ritika_Bali.pdf">Download Portfolio</a>
 								</div>							
 							</section>
 						</div>
@@ -118,8 +131,12 @@
 							</header>
 							
 							<ul class="contact">
-								<li class="icon solid fa-file-download"><a href="documents/Portfolio_Ritika_Bali.pdf">Download Portfolio</a></li>
-								<li class="icon solid fa-file-download"><a href="documents/Resume_Ritika_Bali.pdf">Download Resume</a></li>
+								<li class="icon solid fa-file-download">
+									<a href="documents/Portfolio_Ritika_Bali.pdf" target="_blank" download="Portfolio_Ritika_Bali.pdf">Download Portfolio</a>
+								</li>
+								<li class="icon solid fa-file-download">
+									<a href="documents/Resume_Ritika_Bali.pdf" target="_blank" download="Resume_Ritika_Bali.pdf">Download Resume</a>
+								</li>
 							</ul>
 						</section>                            
 
