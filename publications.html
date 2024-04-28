@@ -11,6 +11,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<style>
+			a {
+				display: inline-block; /* Only occupy necessary space around the image */
+				text-decoration: none; /* Optional: Removes underline from links */
+			}
+			
+			.responsive-image {
+				max-width: 100%; /* Ensures the image is never wider than its container */
+				height: auto; /* Keeps the image proportionate */
+				display: block; /* Optional: Removes bottom space/margin */
+			}
+		</style>		
 	</head>
 	<body class="is-preload">
 
@@ -25,11 +37,10 @@
 							<header id="header">
 								<a href="index.html" class="logo"><strong>RITIKA BALI</strong></a>
 								<ul class="icons">
-                                    <li><a href="documents/Resume_Ritika_Bali.pdf" class="icon solid fa-file-download"><span class="label">Download Resume</span></a></li>
-									<li><a href="https://twitter.com/ritibali" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/ritikabali11" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/ritibali/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-
+                                    <li><a href="documents/Resume_Ritika_Bali.pdf" target="_blank" class="icon solid fa-file-download"><span class="label">Download Resume</span></a></li>
+									<li><a href="https://twitter.com/ritibali" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/ritikabali11" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/ritibali/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
 							</header>
 
@@ -40,7 +51,12 @@
 									</header>
                                   </section>
                                   
-                                  <p><a href="https://www.journal-news.com/news/miami-university-grad-students-host-writers-harvest-to-benefit-food-pantry/P7GMZRSFYZAO7NLRXWWCUI5574/"  target="_blank"><img src="images/Topps.png" width="600"></a></p>
+								  <p>
+									<a href="https://www.journal-news.com/news/miami-university-grad-students-host-writers-harvest-to-benefit-food-pantry/P7GMZRSFYZAO7NLRXWWCUI5574/" target="_blank">
+										<img src="images/Topps.png" class="responsive-image">
+									</a>
+								</p>
+								
                               
 						</div>
 					</div>
@@ -81,8 +97,12 @@
 							</header>
 							
 							<ul class="contact">
-								<li class="icon solid fa-file-download"><a href="documents/Portfolio_Ritika_Bali.pdf">Download Portfolio</a></li>
-								<li class="icon solid fa-file-download"><a href="documents/Resume_Ritika_Bali.pdf">Download Resume</a></li>
+								<li class="icon solid fa-file-download">
+									<a href="documents/Portfolio_Ritika_Bali.pdf" target="_blank" download="Portfolio_Ritika_Bali.pdf">Download Portfolio</a>
+								</li>
+								<li class="icon solid fa-file-download">
+									<a href="documents/Resume_Ritika_Bali.pdf" target="_blank" download="Resume_Ritika_Bali.pdf">Download Resume</a>
+								</li>								
 							</ul>
 						</section>                            
 
