@@ -17,15 +17,22 @@
         <style>
           .flex-container {
             display: flex;
-            align-items: stretch; /* Adjust the items vertically */
+            flex-direction: row;
+            align-items: flex-start; /* Adjust the items vertically */
+            justify-content: space-between; /* Adjust the items horizontally */
           }
-          .flex-text {
+          .flex-text, .flex-image {
             flex: 1; /* Takes 50% of the container */
-            padding-right: 20px; /* Adds some space between the text and the image */
+            /* padding-right: 20px; Adds some space between the text and the image */
           }
-          .flex-image {
-            flex: 1; /* Takes 50% of the container */
-            text-align: center; /* Center the image if smaller than 50% */
+
+          @media (max-width: 768px) {
+            .flex-container {
+              flex-direction: column; /* Stack items vertically on smaller screens */
+            }
+            .flex-image img {
+              max-width: 100%; /* Adjust the image width to fit the container */
+            }
           }
         </style>        
 	</head>
@@ -42,17 +49,17 @@
 							<header id="header">
 								<a href="index.html" class="logo"><strong>RITIKA BALI</strong></a>
 								<ul class="icons">
-                                    <li><a href="documents/Resume_Ritika_Bali.pdf" class="icon solid fa-file-download"><span class="label">Download Resume</span></a></li>
-									<li><a href="https://twitter.com/ritibali" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/ritikabali11" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/ritibali/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                  <li><a href="documents/Resume_Ritika_Bali.pdf" target="_blank" class="icon solid fa-file-download"><span class="label">Download Resume</span></a></li>
+									<li><a href="https://twitter.com/ritibali" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/ritikabali11" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/ritibali/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
 							</header>			
               				<!-- Body -->
                   <section>
                     <header class="major">
                       <h4>About me</h4>
-                  </header>                    
+                  </header>
                   <div class="flex-container">
                       <div class="flex-text">
                           <div class="content">
@@ -75,7 +82,7 @@
                         </span>
                       </div>
                     </div>
-                  </section>                            
+                  </section>                   
 						</div>
 					</div>
 
@@ -115,8 +122,12 @@
                                 </header>
                                 
                                 <ul class="contact">
-                                    <li class="icon solid fa-file-download"><a href="documents/Portfolio_Ritika_Bali.pdf">Download Portfolio</a></li>
-                                    <li class="icon solid fa-file-download"><a href="documents/Resume_Ritika_Bali.pdf">Download Resume</a></li>
+                                  <li class="icon solid fa-file-download">
+                                    <a href="documents/Portfolio_Ritika_Bali.pdf" target="_blank" download="Portfolio_Ritika_Bali.pdf">Download Portfolio</a>
+                                  </li>
+                                  <li class="icon solid fa-file-download">
+                                    <a href="documents/Resume_Ritika_Bali.pdf" target="_blank" download="Resume_Ritika_Bali.pdf">Download Resume</a>
+                                  </li>
                                 </ul>
                             </section>                            
 
