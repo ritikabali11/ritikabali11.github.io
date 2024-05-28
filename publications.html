@@ -16,11 +16,17 @@
 				display: inline-block; /* Only occupy necessary space around the image */
 				text-decoration: none; /* Optional: Removes underline from links */
 			}
-			
+
 			.responsive-image {
-				max-width: 100%; /* Ensures the image is never wider than its container */
-				height: auto; /* Keeps the image proportionate */
+				width: 30vw; /* Adjust to fit your design needs */
+				height: 20vw; /* Maintain aspect ratio */
+				max-width: 300px; /* Maximum width for larger screens */
+				max-height: 200px; /* Maximum height for larger screens */
 				display: block; /* Optional: Removes bottom space/margin */
+				border: 2px solid #000; /* Adjust the color and width as needed */
+				padding: 5px; /* Optional: Adds space between the border and the image */
+				border-radius: 4px; /* Optional: Adds rounded corners */
+				object-fit: cover; /* Ensure the image covers the specified dimensions */
 			}
 		</style>		
 	</head>
@@ -49,15 +55,20 @@
 									<header class="major">
 										<h4>Publications</h4>
 									</header>
-                                  </section>
-                                  
-								  <p>
-									<a href="https://www.journal-news.com/news/miami-university-grad-students-host-writers-harvest-to-benefit-food-pantry/P7GMZRSFYZAO7NLRXWWCUI5574/" target="_blank">
-										<img src="images/Topps.png" class="responsive-image">
-									</a>
-								</p>
-								
-                              
+									<div class="posts">
+										<article>
+											<a href="http://mistakehouse.org/article/what-goes-around-comes-around/" target="_blank">
+												<img src="images/mistake-house.png" class="responsive-image">
+											</a>
+											<h3>Mistake House Magazine</h3>									
+										</article>
+										<article>
+											<a href="https://www.journal-news.com/news/miami-university-grad-students-host-writers-harvest-to-benefit-food-pantry/P7GMZRSFYZAO7NLRXWWCUI5574/" target="_blank">
+												<img src="images/Topps.png" class="responsive-image">
+											</a>
+											<h3>Journal-News ePaper Article</h3>
+										</article>									
+                                </section>
 						</div>
 					</div>
 
